@@ -36,7 +36,6 @@ module PolyNotify
 
     def extract_horaire(doc)
       horaire = doc.css('table').select {|table| table['cellspacing'] == '5'}
-      puts horaire
     end
   end
 end

@@ -16,3 +16,9 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Rubymine
+.idea/
+
+# Private file
+config/config.yml

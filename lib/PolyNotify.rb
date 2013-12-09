@@ -18,15 +18,17 @@ module PolyNotify
       @checksum_file = "#{ENV['HOME']}/.polynotify"
       @inputs = {}
 
-      load_config
-
       # For HTTParty
       self.class.base_uri @baseurl
       self.class.headers @headers
     end
 
-    def load_config
-      @config = YAML.load(File.open('../../config/config.yml'))
+    def load_config_file(file)
+      @config = YAML.load(File.open(file))
+    end
+
+    def load_config_hash(hash)
+      @config = hash
     end
 
     def checksum
